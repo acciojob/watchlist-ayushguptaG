@@ -20,6 +20,7 @@ public class MovieRepository {
     public String addMovie(Movie movie){
         String movieName= movie.getName();
         watchlistByMovie.put(movieName, movie);
+        listOfMovies.add(movieName);
 
         return "success";
     }
@@ -58,12 +59,7 @@ public class MovieRepository {
     }
     public List<String> findAllMovies(){
 
-        for(String name : watchlistByMovie.keySet()){
-            if(!listOfMovies.contains(name))
-                listOfMovies.add(name);
-        }
         return listOfMovies;
-
     }
     public String deleteDirectorByName(String directorName){
 
