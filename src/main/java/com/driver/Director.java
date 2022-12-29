@@ -7,15 +7,13 @@ public class Director {
     private String name;
     private int numberOfMovies;
     private double imdbRating;
-//    private ArrayList<String> movieList;
 
-    public Director(){};
+    public Director() {};
 
     public Director(String name, int numberOfMovies, double imdbRating) {
         this.name = name;
         this.numberOfMovies = numberOfMovies;
         this.imdbRating = imdbRating;
-//        this.movieList= new ArrayList<>();
     }
 
     public String getName() {
@@ -42,12 +40,4 @@ public class Director {
         this.imdbRating = imdbRating;
     }
 
-//    public ArrayList<String> getGetMovieList() {
-//        return movieList;
-//    }
-//    public void addToList(String movieName){
-//
-//        movieList.add(movieName);
-//
-//    }
 }
