@@ -61,6 +61,25 @@ public class MovieRepository {
 
         return listOfMovies;
     }
+    public String getDirectorByMovieName(String movieName){
+
+        // check whether the movie is present in db or not
+        if(!watchlistByMovie.containsKey(movieName)){
+            return null;
+        }
+        else{
+            for(String directorName : movieDirectorPair.keySet()){
+
+                // iterating in list of movies in movie-director pair
+                for(String name: movieDirectorPair.get(directorName)){
+
+                    if(name.equals(movieName))
+                        return directorName;
+                }
+            }
+        }
+        return null;
+    }
     public String deleteDirectorByName(String directorName){
 
         deleteMovies(directorName);
